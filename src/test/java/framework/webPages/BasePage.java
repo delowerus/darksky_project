@@ -49,6 +49,10 @@ public class BasePage {
         return elements;
     }
 
+    public static List<WebElement> getWebElements(By locator){
+        return SharedSD.getDriver().findElements(locator);
+    }
+
     public void clickOn(By locator){
         SharedSD.getDriver().findElement(locator).click();
     }
